@@ -2,7 +2,7 @@
 set -o errexit
 
 kubectl delete ns "$BENCHMARK_NAME" || true
-helm repo add zeebe-benchmark https://zeebe-io.github.io/benchmark-helm
+helm repo add zeebe-benchmark https://camunda.github.io/zeebe-benchmark-helm
 helm install "$BENCHMARK_NAME" \
     zeebe-benchmark/zeebe-benchmark \
     --namespace="$BENCHMARK_NAME" --create-namespace \
